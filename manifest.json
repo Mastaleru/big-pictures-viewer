@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Zoso's large images fix",
+  "version": "0.1",
+  "permissions": [
+    "activeTab",
+    "https://www.zoso.ro/"
+  ],
+  "description": "This extension opens lightgallery large pictures in a new tab",
+  "icons": {
+    "32": "icon32.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.zoso.ro/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "contentScript.js"
+      ],
+      "css": [
+        "contentCSS.css"
+      ]
+    }
+  ]
+}
